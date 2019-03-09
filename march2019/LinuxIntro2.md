@@ -201,6 +201,19 @@ Note: Now that we are familiar with some of Linux commands, let's explore naviga
 
 
 ### Task 9: Install a webserver on the Frontend node and test you are able to access it  [ you may try with HTTPD or NGINX ]
+     sudo yum install httpd  [ answer yes to installation request]
+     sudo systemctl start httpd [ to start the web server]
+     curl http://localhost to test  the web server is running
+     update  machine security group to make the web server accessible over the net
+     test 
+
+### Task 10: Lock down access to the box and web-server to be only accessible by you
+     update  machine security group. change inbound to your home/custom IP.
+
+### Task 11: Can you set this up as your website using AWS Route53?
+
+
+
 
 ## Summary
 

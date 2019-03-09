@@ -35,7 +35,8 @@ Ensure the following is installed and working
 
 ---
 
-###  Task 1: The Department has been asked to setup infrastructure to support a new product launch.  The product will have a frontend and a backend system. We need a test bed to to try out a few initial confoguration work. Setup two small machines to achieve this .  The following requirements must be met
+###  Task 1: The Department has been asked to setup infrastructure to support a new product launch.  The product will have a frontend and a backend system. We need a test bed to  try out a few initial configuration work. Setup two small nodes with the following requirements to achieve this.
+
 - Use Amazon Linux 2 AMI/ T2 Micro
 - Machine should accessible over the Internet ONLY via ssh
 - Security Group for each machine should be named correctly
