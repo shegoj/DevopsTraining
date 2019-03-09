@@ -3,6 +3,6 @@
 ![](https://i.imgur.com/pyg9mH1.png)
 
 
-## 👬 Contribution
+## 👬 Module Agenda
 
-This roadmap has been pulled from [here](https://github.com/kamranahmedse/developer-roadmap). Please take note of the contributions and visit to see additional roadmaps on WebDev and Backend! Seriously, it's awesome. Check out this repo.
+We will be setting up a webportal using Devops tooling to achieve this. This will be the main agenda of the module
