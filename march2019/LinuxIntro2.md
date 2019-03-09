@@ -1,4 +1,4 @@
-#  Devops Essentials Mdodule 1 [ March 2019]
+#  Devops Essentials Module 1 [ March 2019]
 
 This guide provides simple practical steps to learning and using Linux. It will take about an hour to complete
 
