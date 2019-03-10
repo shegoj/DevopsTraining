@@ -86,8 +86,15 @@ Ensure the following is installed and working
 - ssh-copy-id frontend-user@ip-frontend-node
 
 
-#### Create a  Jenkins job( pipeline) to create file /tmp/helloworld on Backend node. 
+#### Create a  Jenkins job( pipeline) to create file /tmp/helloworld on Frontend node. 
       su frontend-user -   you may  use this code [ ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 'touch /tmp/helloworld'
+
+#### Copy the key to Backend node
+- ssh-copy-id backend-user@ip-backend-node
+
+
+#### Create a  Jenkins job( pipeline) to create file /tmp/helloworld on Backend node. 
+      su backend-user -   you may  use this code [ ssh backend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 'touch /tmp/helloworld'
 
 
 ##### Exercise: Use Jenkins to deploy HTTPD (Apache) to the Frontend node. you may need to remove existing one if its already deployed
