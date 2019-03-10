@@ -76,7 +76,7 @@ Ensure the following is installed and working
 #### Generate SSH keys for Jenkins.   
 - connect to the node
 - sudo -i
-- vi /etc/passwd  . edit file to make jenkins user a login account  [ jenkins:x:996:994:Jenkins Automation Server:/var/lib/jenkins:/bin/bash]
+- vi /etc/passwd.  Edit file to make jenkins user a login account look for a line that begins with jenkins . Change the last entry on the line from "/bin/nologin" "/bin/bash"
 - Add Jenkins to sudo users  :  vi /etc/sudoers.d/90-cloud-init-users     [jenkins ALL=(ALL) NOPASSWD:ALL ]
 - ssh-keygen
      
