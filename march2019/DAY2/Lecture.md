@@ -47,6 +47,7 @@ Ensure the following is installed and working
 ###  Enable Password authentication on Frontend node. 
 - sudo -i.
 -  [ vi /etc/ssh/sshd_config ] .. change [PasswordAuthentication no]   to [ PasswordAuthentication yes ]
+-  restart sshd  [ service sshd restart ] 
 - Try exercise 2 again
 
 
