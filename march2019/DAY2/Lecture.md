@@ -78,17 +78,12 @@ Ensure the following is installed and working
 - sudo -i
 - vi /etc/passwd.  Edit file to make jenkins,  user a login account. Look for a line that begins with jenkins . Change the last entry on the line from "/bin/false" "/bin/bash"
 - Add Jenkins to sudo users  :  vi /etc/sudoers.d/90-cloud-init-users     [jenkins ALL=(ALL) NOPASSWD:ALL ]
+- su - jenkins
 - ssh-keygen
+
      
-      
-
 #### Copy the key to Frontend node
-- ssh-copy-id frontend-user@oip-frontend-node
-
-
-#### Create a  Jenkins job( pipeline) to create file /tmp/helloworld on Frontend node
-- Add Jenkins to sudo users  :  vi /etc/sudoers.d/90-cloud-init-users     [jenkins ALL=(ALL) NOPASSWD:ALL ]
-- ssh-keygen   
+- ssh-copy-id frontend-user@ip-frontend-node
 
 
 #### Create a  Jenkins job( pipeline) to create file /tmp/helloworld on Backend node. 
