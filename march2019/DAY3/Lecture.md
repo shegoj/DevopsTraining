@@ -40,10 +40,10 @@ Ensure the following is installed and working
 
 ###  synch Jenkins user with your Github repo using ssh keys
 
-- ensure you are jenkins-user 
+- ensure you are jenkins [user]  su - jenkins
 - authenticate to your Github  repo https://github.com 
 - go to https://github.com/settings/keys , then hit "New SSH Key"
-- Give it a title. In the key section, copy  content of /home/jenkins/.ssh/id_rsa.pub into the section
+- Give it a title. In the key section, copy  content of /var/lib/jenkins/.ssh/id_rsa.pub into the section
 - go to https://github.com/settings/keys , then hit "New SSH Key"
 
 
@@ -52,7 +52,7 @@ Ensure the following is installed and working
  
 
 ###  push your first update to your new repo
-- ensure you are jenkins-user. cd to /tmp
+- ensure you are jenkins [user]. cd to /tmp
 - echo "# devops101 first commit updated by [[your name ]] " >> README.md
 - git init
 - git add README.md
