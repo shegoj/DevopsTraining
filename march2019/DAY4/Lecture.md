@@ -55,6 +55,7 @@ Ensure the following is installed and working
 
 
 ###  change the content of myfirstscript.sh content in your repo to create different files... /tmp/helloworld3, /tmp/helloworld4 etc
+- use previous steps	
 
 
 ###  Add a new functionality to the  script which should allow passing parameter to the script. The change should be commited in a separate branch. Call the branch "inprogress"
