@@ -70,6 +70,9 @@ Ensure the following is installed and working
 
 
 ### Create a new job to run/test the branch
+- sh -x myfirstscript.sh "/tmp/newdirectory"
+
+ 
 
 
 ### if all goes well, merge inprogess branch to master branch
