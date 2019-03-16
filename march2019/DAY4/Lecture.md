@@ -47,33 +47,55 @@ Ensure the following is installed and working
 - go to https://github.com/settings/keys , then hit "New SSH Key"
 
 
-###  Create a new Git project 
-- Paste  https://github.com/new on your browser to create a new Github Repository. Call it devops101
+###  create a script for the file creation task, and add the script to your git repo 
+- the line [ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 'touch /tmp/helloworld ] should be  written into a file.  
+- create a new directory /tmp/wkspace. mkdir /tmp/wkspace
+- cd /tmp/wkspace
+- git clone https://yourRepoUrl
+- cd dev* 
+- echo "ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 'touch /tmp/helloworld2'" >> myfirstscript.sh
+- git add myfirstscript.sh 
+- git commit -m "Added a deployment script"
+- git push
+
  
 
-###  push your first update to your new repo
-- ensure you are jenkins [user]. cd to /tmp
+###  create a new job to use the script for deployment
+- create a new Freestyle Jenkins job
+- specify Source Code Managment  and Build as below
 - echo "# devops101 first commit updated by [[your name ]] " >> README.md
-- git init
-- git add README.md
-- git commit -m "first commit"
-- git remote add origin git@github.com:shegoj/devops101.git
-- git push -u origin master
-- Refresh the Github page. The ReadMe file should be here 
+- run build
 
 
-###  push your second update to your new repo
-- edit the ReadMe file . Append "Another line added" to the file
-- git commit -a -m "file update"
+###  change the content of myfirstscript.sh content in your repo to create different files... /tmp/helloworld3, /tmp/helloworld4 etc
+
+
+###  Add a new functionality to the  script which should allow passing parameter to the script. The change should be commited in a separate branch. Call the branch "inprogress"
+
+- cd /tmp/wkspace
+- cd dev* 
+- git pull  
+- git checkout -b inprogress  
+- now update the script. Replace content with this new line:   ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "touch /tmp/$1"
+- git commit -am "updated run script"  
+- git push -u origin inprogress  
+
+
+
+### Create a new job to run/test the branch
+
+
+### if all goes well, merge inprogess branch to master branch
+
+- git merge master
+- git checkout master
 - git push
-- Verify the file is update on Github
 
 
-###  Update web server home page
-- check the web server is up and running 
-- create a job to push an index file [ index.html]  to /var/www/html on the frontend node . ou can put "Hello this is [[your name]]  in the file.
-- restart httpd
-- check that the home page is now updated
+### check to see the merge is successful and update deploy job accordingly.
+
+
+
 
 
 
