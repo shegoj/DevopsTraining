@@ -77,8 +77,8 @@ Ensure the following is installed and working
 
 ### if all goes well, merge inprogess branch to master branch
 
-- git merge inprogress
 - git checkout master
+- git merge inprogress
 - git push
 
 ### check to see the merge is successful and update deploy job accordingly.
