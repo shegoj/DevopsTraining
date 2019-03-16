@@ -35,10 +35,10 @@ Ensure the following is installed and working
 
 
 ###  create a script for the file creation task, and add the script to your git repo 
-- the line [ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 'touch /tmp/helloworld ] should be  written into a file.  
+- log on to the Toolserver box
 - create a new directory /tmp/wkspace. mkdir /tmp/wkspace
 - cd /tmp/wkspace
-- git clone https://yourRepoUrl
+- git clone git@://yourRepoUrl
 - cd dev* 
 - echo "ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 'touch /tmp/helloworld2'" >> myfirstscript.sh
 - git add myfirstscript.sh 
