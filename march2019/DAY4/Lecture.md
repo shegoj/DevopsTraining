@@ -33,19 +33,6 @@ Ensure the following is installed and working
 
 ---
 
-###  Install git on your Toolbox machine
-
-- sudo yum install git -y
-- type git to check that it is working
-
-###  synch Jenkins user with your Github repo using ssh keys
-
-- ensure you are jenkins [user]  su - jenkins
-- authenticate to your Github  repo https://github.com 
-- go to https://github.com/settings/keys , then hit "New SSH Key"
-- Give it a title. In the key section, copy  content of /var/lib/jenkins/.ssh/id_rsa.pub into the section
-- go to https://github.com/settings/keys , then hit "New SSH Key"
-
 
 ###  create a script for the file creation task, and add the script to your git repo 
 - the line [ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 'touch /tmp/helloworld ] should be  written into a file.  
