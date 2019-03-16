@@ -70,7 +70,7 @@ Ensure the following is installed and working
 
 
 ### Create a new job to run/test the branch
-- sh -x myfirstscript.sh "/tmp/newdirectory"
+- sh -x myfirstscript.sh "newdirectory"
 
  
 
