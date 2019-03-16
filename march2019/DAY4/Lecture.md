@@ -81,16 +81,14 @@ Ensure the following is installed and working
 - git push -u origin inprogress  
 
 
-
 ### Create a new job to run/test the branch
 
 
 ### if all goes well, merge inprogess branch to master branch
 
-- git merge master
+- git merge inprogress
 - git checkout master
 - git push
-
 
 ### check to see the merge is successful and update deploy job accordingly.
 
