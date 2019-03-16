@@ -50,7 +50,7 @@ Ensure the following is installed and working
 ###  create a new job to use the script for deployment
 - create a new Freestyle Jenkins job
 - specify Source Code Managment  
-- on the build box, specify [ sh -x /devop101/myfirstscript.sh ]
+- on the build box, specify [ sh -x /devops101/myfirstscript.sh ]
 - run build
 
 
