@@ -35,7 +35,7 @@ Ensure the following is installed and working
 
 
 ###  create a script for the file creation task, and add the script to your git repo 
-- log on to the Toolserver box
+- log on to the Toolserver box as jenkins user 
 - create a new directory /tmp/wkspace. mkdir /tmp/wkspace
 - cd /tmp/wkspace
 - git clone git@://yourRepoUrl
