@@ -57,7 +57,7 @@ Ensure the following is installed and working
 - git init
 - git add README.md
 - git commit -m "first commit"
-- git remote add origin git@github.com:shegoj/devops101.git
+- git remote add origin git@github.com:[[your-github-name]]/devops101.git
 - git push -u origin master
 - Refresh the Github page. The ReadMe file should be here 
 
@@ -71,7 +71,7 @@ Ensure the following is installed and working
 
 ###  Update web server home page
 - check the web server is up and running 
-- create a job to push an index file [ index.html]  to /var/www/html on the frontend node . ou can put "Hello this is [[your name]]  in the file.
+- create a job to push an index file [ index.html]  to /var/www/html on the frontend node . You can put "Hello this is [[your name]]  in the file.
 - restart httpd
 - check that the home page is now updated
 
