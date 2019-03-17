@@ -48,6 +48,7 @@ Ensure the following is installed and working
   
   stage('Checkout source') {
     git url: 'htpps://yourrepo'
+    sh "chmod +x secondscript.sh"
     sh " ./secondscript.sh 'withpipeline'"
   
   }
