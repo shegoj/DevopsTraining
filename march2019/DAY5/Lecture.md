@@ -56,46 +56,26 @@ node {
 - run the job
 
 
-
- 
-
-###  create a new job to use the script for deployment
-- create a new Freestyle Jenkins job
-- specify Source Code Managment  
-- on the build box, specify [ sh -x myfirstscript.sh ]
+###  create a Jenkins paramter which takes a file name to be created. Update the job to use the parameter for file creation. Use this to create file /tmp/created_via_paramter
+- edit the job. select "This project is parameterised". add a "string type"  paramter. Call it "filename". Give it a default value "nofile"
+- update script as below. Adapt it for your repository ans script name.
+- ```node {
+  stage('Clean workspace') {
+    deleteDir()
+            
+  }
+  
+  stage('Checkout source') {
+    git url: 'https://github.com/shegoj/DevopsTraining.git'
+  }
+  
+  stage ('execute script') {
+   
+    sh "secondscript.sh  ${params.filename}"
+  }
+}
+```
 - run build
-
-
-###  change the content of myfirstscript.sh content in your repo to create different files... /tmp/helloworld3, /tmp/helloworld4 etc
-- use previous steps	
-
-
-###  Add a new functionality to the  script which should allow passing parameter to the script. The change should be commited in a separate branch. Call the branch "inprogress"
-
-- cd /tmp/wkspace
-- cd dev* 
-- git pull  
-- git checkout -b inprogress  
-- now update the script. Replace content with this new line:   ssh frontend-user@ip -v  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "touch /tmp/$1"
-- git commit -am "updated run script"  
-- git push -u origin inprogress  
-
-
-### Create a new job to run/test the branch
-- sh -x myfirstscript.sh "newdirectory"
-
- 
-
-
-### if all goes well, merge inprogess branch to master branch
-
-- git checkout master
-- git merge inprogress
-- git push
-
-### check to see the merge is successful and update deploy job accordingly.
-
-
 
 
 
