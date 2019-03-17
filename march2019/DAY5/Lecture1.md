@@ -73,7 +73,7 @@ node {
   
   stage ('execute script') {
     sh "chmod +x secondscript.sh"
-    sh "secondscript.sh  ${params.filename}"
+    sh "./secondscript.sh  ${params.filename}"
   }
 }
 ```
