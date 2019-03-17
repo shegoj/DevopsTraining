@@ -52,7 +52,7 @@ node {
     sh " ./secondscript.sh 'withpipeline'"
   
   }
-}```
+} ```
 - run the job
 
 
