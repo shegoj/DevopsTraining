@@ -41,7 +41,7 @@ Ensure the following is installed and working
 ###  Use AWS-CLI to list running EC2 Frontent node. Display its IP address, instance id and tags
 - 
 - ensure aws-cli is configured appropriately
-- aws ec2 describe-instances --filters "Name=tag:Name,Values=Frontent"   "Name=instance-state-name,Values=running"   |  jq -r ".Reservations[] | .Instances[] | [.InstanceId, .PrivateIpAddress, .Tags[].Value]"
+- aws ec2 describe-instances --filters "Name=tag:Name,Values=Frontend"   "Name=instance-state-name,Values=running"   |  jq -r ".Reservations[] | .Instances[] | [.InstanceId, .PrivateIpAddress, .Tags[].Value]"
 
 
 ###  Exercise: Your boss wants you to create a job to export all the runing ec2 instances to a csv file. The file should contain IP and instance name.
