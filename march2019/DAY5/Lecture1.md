@@ -40,7 +40,8 @@ Ensure the following is installed and working
 - Create a new item (job), priovide a name .
 - select pipeline
 - add this code to the pipeline:
-- ```node {
+- ```
+node {
   stage('Clean workspace') {
     deleteDir()
             
@@ -58,7 +59,8 @@ Ensure the following is installed and working
 ###  create a Jenkins paramter which takes a file name to be created. Update the job to use the parameter for file creation. Use this to create file /tmp/created_via_paramter
 - edit the job. select "This project is parameterised". add a "string type"  paramter. Call it "filename". Give it a default value "nofile"
 - update script as below. Adapt it for your repository ans script name.
-- ```node {
+- ```
+node {
   stage('Clean workspace') {
     deleteDir()
             
