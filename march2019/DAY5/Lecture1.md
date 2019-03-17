@@ -40,8 +40,7 @@ Ensure the following is installed and working
 - Create a new item (job), priovide a name .
 - select pipeline
 - add this code to the pipeline:
-- ```
-node {
+- ```node {
   stage('Clean workspace') {
     deleteDir()
             
