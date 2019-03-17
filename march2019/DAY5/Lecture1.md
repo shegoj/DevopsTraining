@@ -47,12 +47,11 @@ Ensure the following is installed and working
   }
   
   stage('Checkout source') {
-    git url: 'htpps://yourrepo'
+    git url: 'https://yourrepo'
     sh "chmod +x secondscript.sh"
     sh " ./secondscript.sh 'withpipeline'"
-  
   }
-} ```
+} 
 - run the job
 
 
